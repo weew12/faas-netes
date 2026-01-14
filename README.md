@@ -1,3 +1,13 @@
+# weew12 >>>
+
+> this repo is forked from github faas-netes official repo branch HEAD: 4edc9c49f2b70e65c21b520b43e9d88fa721a46b
+
+## 备注
+
+**可以通过 `git` 提交记录信息查看基于原始版本所做的修改内容以及每次修改的地方**
+
+# weew12 <<<
+
 faas-netes Community Edition (CE)
 ===========
 
