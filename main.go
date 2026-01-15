@@ -66,9 +66,10 @@ Learn more: https://github.com/openfaas/faas/blob/master/EULA.md
 Version: %s Commit: %s
 `, release, sha)
 
-	if err := config.ConnectivityCheck(); err != nil {
-		log.Fatalf("Error checking connectivity, OpenFaaS CE cannot be run in an offline environment: %s", err.Error())
-	}
+	// 注释机器上网检测
+	// if err := config.ConnectivityCheck(); err != nil {
+	// 	log.Fatalf("Error checking connectivity, OpenFaaS CE cannot be run in an offline environment: %s", err.Error())
+	// }
 
 	clientCmdConfig, err := clientcmd.BuildConfigFromFlags(masterURL, kubeconfig)
 	if err != nil {
