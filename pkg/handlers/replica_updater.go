@@ -57,11 +57,12 @@ func MakeReplicaUpdater(defaultNamespace string, clientset *kubernetes.Clientset
 			}
 		}
 
-		if req.Replicas == 0 {
-			http.Error(w, "replicas cannot be set to 0 in OpenFaaS CE",
-				http.StatusBadRequest)
-			return
-		}
+		// 源码中限制了副本数不能为 0 注释掉这段逻辑
+		// if req.Replicas == 0 {
+		// 	http.Error(w, "replicas cannot be set to 0 in OpenFaaS CE",
+		// 		http.StatusBadRequest)
+		// 	return
+		// }
 
 		options := metav1.GetOptions{
 			TypeMeta: metav1.TypeMeta{
