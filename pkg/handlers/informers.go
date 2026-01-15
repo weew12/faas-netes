@@ -64,7 +64,8 @@ func applyValidation(deployment *appsv1.Deployment, kubeClient *kubernetes.Clien
 	current := *deployment.Spec.Replicas
 	var target int
 	if current == 0 {
-		target = 1
+		// target = 1
+		target = 0 // 原本的逻辑是当实例数为 0 的时候 自动改为1 必须改为 0 否则无法实现函数实例为 0
 	} else if current > MaxReplicas {
 		target = MaxReplicas
 	} else {
